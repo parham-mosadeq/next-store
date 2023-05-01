@@ -6,36 +6,40 @@ const navItems = ['home', 'aboutUs', 'products', 'category'];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='relative w-full flex justify-between items-center pl-2 pr-2 bg-purple-500 h-10 md:max-h-10'>
-      <div>
-        <Link href={'/'}>
-          <img src='LOGO' alt='LOGO' />
-        </Link>
-      </div>
+    <header className='relative w-full  mx-auto  bg-purple-500 h-10 md:max-h-10'>
+      <nav className='max-w-7xl  mx-auto flex justify-between items-center h-10 pl-2 pr-2'>
+        <div>
+          <Link href={'/'}>
+            <img src='LOGO' alt='LOGO' />
+          </Link>
+        </div>
 
-      <div
-        onClick={() => setIsOpen((prev) => !prev)}
-        className={`cursor-pointer  md:hidden text-lg font-bold text-yellow-50 z-50`}
-      >
-        {!isOpen ? <HiMenu /> : <HiX />}
-      </div>
+        <div
+          onClick={() => setIsOpen((prev) => !prev)}
+          className={`cursor-pointer  md:hidden text-lg font-bold text-yellow-50 z-50`}
+        >
+          {!isOpen ? <HiMenu /> : <HiX />}
+        </div>
 
-      <ul
-        className={`${
-          isOpen ? 'translate--x-full' : 'hidden'
-        } w-1/2 capitalize bg-purple-600  absolute right-0 min-h-screen top-0 text-center
+        <ul
+          className={`${
+            isOpen ? 'translate--x-full' : 'hidden'
+          } w-1/2 capitalize bg-purple-600  absolute right-0 min-h-screen top-0 text-center
          md:relative md:flex md:items-center md:justify-center md:bg-inherit md:min-h-0 md:w-min`}
-      >
-        {navItems.map((ni) => (
-          <li
-            className='text-white mt-10 border-t-2 md:mr-3 md:m-0 md:border-none'
-            key={ni}
-          >
-            <Link href={`/${ni === 'home' ? '' : ni.toLowerCase()}`}>{ni}</Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+        >
+          {navItems.map((ni) => (
+            <li
+              className='text-white mt-10 hover:scale-95 hover:text-yellow-100  md:mr-3 md:m-0 md:border-none'
+              key={ni}
+            >
+              <Link href={`/${ni === 'home' ? '' : ni.toLowerCase()}`}>
+                {ni}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 };
 
