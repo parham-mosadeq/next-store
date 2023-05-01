@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { HiMenu, HiX } from 'react-icons/hi';
-const navItems = ['home', 'aboutUs', 'products', 'category'];
+const navItems = ['products', 'category', 'aboutUs'];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
