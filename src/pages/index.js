@@ -4,8 +4,7 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-    <Layout className=''>
-      <Titles title='Home' />
+    <Layout title='Home' className=''>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo id
         reiciendis, impedit doloremque aspernatur eligendi pariatur ad

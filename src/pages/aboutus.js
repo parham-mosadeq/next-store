@@ -4,8 +4,7 @@ import React from 'react';
 
 const AboutUsPage = () => {
   return (
-    <Layout>
-      <Titles title='About Us' />
+    <Layout title='About Us'>
       <div className='mb-5'>
         <h3>Welcome To shop-P</h3>
       </div>
