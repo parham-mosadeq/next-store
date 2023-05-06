@@ -6,16 +6,21 @@ export const apiSlice = createApi({
 
   endpoints: (builder) => ({
     getProducts: builder.query({ query: () => '/products' }),
-    getCategory: builder.query({ query: () => '/categories' }),
-    getCategoryID: builder.query({ query: (cid) => `/categories/${cid}` }),
-    getSortedProducts: builder.query({ query: () => '/categories' }),
+    getCategory: builder.query({ query: () => '/products/categories' }),
+    getCategoryID: builder.query({
+      query: (cid) => `/products/category/${cid}`,
+    }),
     getProductsByID: builder.query({ query: (pid) => `/products/${pid}` }),
+    getSortedProducts: builder.query({
+      query: (limit = 0) => `/products?sort=asc${limit && `&limit=${limit}`}`,
+    }),
   }),
 });
 
 export const {
   useGetProductsQuery,
   useGetCategoryQuery,
-  useLazyGetProductsByIDQuery,
-  useLazyGetSortedProductsQuery,
+  useGetSortedProductsQuery,
+  useGetCategoryIDQuery,
+  useGetProductsByIDQuery,
 } = apiSlice;
