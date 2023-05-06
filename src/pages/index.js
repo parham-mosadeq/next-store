@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout';
-import Titles from '@/components/layout/Titles';
-import React from 'react';
+import { useGetProductsQuery } from '@/redux/slices/getData';
 
 const HomePage = () => {
+  // console.log(useGetProductsQuery);
+  const { data, isLoading, isSuccess, isError, error } = useGetProductsQuery();
+  console.log(isLoading);
   return (
     <Layout title='Home' className=''>
       <p>
