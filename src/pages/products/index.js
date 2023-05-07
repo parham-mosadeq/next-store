@@ -29,7 +29,7 @@ const ProductsPage = () => {
         <div className='w-full'>
           <Products products={orderedProducts} />
         </div>
-        <div>
+        <div className='flex justify-center items-center'>
           <Pagination
             numPages={numPages}
             pageIndex={pageIndex}
