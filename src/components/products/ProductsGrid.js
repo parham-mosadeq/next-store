@@ -1,6 +1,6 @@
 const ProductsGrid = ({ children }) => {
   return (
-    <div className='max-h-screen w-full grid md:grid-cols-2 xl:grid-cols-3'>
+    <div className='w-full grid gap-2 md:grid-cols-2 xl:grid-cols-3'>
       {children}
     </div>
   );

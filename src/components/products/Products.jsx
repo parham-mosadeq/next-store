@@ -2,6 +2,7 @@ import React from 'react';
 import ProductsGrid from './ProductsGrid';
 import ProductsCard from './ProductsCard';
 const Products = ({ products }) => {
+  console.log(products);
   return (
     <ProductsGrid>
       {products.map((product) => (

@@ -3,7 +3,7 @@ import Titles from './Titles';
 
 const Layout = ({ children, title }) => {
   return (
-    <main className='w-3/4  mx-auto min-h-screen  mt-5 mb-20'>
+    <main className='max-w-96 mx-auto'>
       <Titles title={title} />
       {children}
     </main>
