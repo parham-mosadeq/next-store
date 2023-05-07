@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { HiMenu, HiX } from 'react-icons/hi';
+import Image from 'next/image';
 const navItems = ['products', 'category', 'aboutUs'];
 
 const Navbar = () => {
@@ -8,9 +9,15 @@ const Navbar = () => {
   return (
     <header className='relative w-full  mx-auto  bg-purple-500 h-10 md:max-h-10'>
       <nav className='max-w-7xl  mx-auto flex justify-between items-center h-10 pl-2 pr-2'>
-        <div>
+        <div className=' w-full h-full'>
           <Link href={'/'}>
-            <img src='LOGO' alt='LOGO' />
+            <Image
+              className='rounded-full block object-cover '
+              src='/logo/logo.png'
+              alt='LOGO'
+              width={40}
+              height={40}
+            />
           </Link>
         </div>
 
