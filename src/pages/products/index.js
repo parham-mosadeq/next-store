@@ -18,14 +18,12 @@ const ProductsPage = () => {
 
   if (isLoading && !isSuccess) <Banners banner={isLoading} />;
 
-  console.log(data);
   if (isSuccess) {
     const numPages = Math.ceil(data.length / POSTS_PER_PAGE);
     const orderedProducts = data.slice(
       pageIndex * POSTS_PER_PAGE,
       (pageIndex + 1) * POSTS_PER_PAGE
     );
-    console.log('rendered', pageIndex);
     return (
       <Layout title='Shop-P | Products '>
         <div className='w-full'>
