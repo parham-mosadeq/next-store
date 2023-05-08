@@ -20,7 +20,7 @@ const ProductsCard = ({ product }) => {
             <h2>
               <Link
                 className='text-purple-700 hover:text-purple-600 p-0 m-0'
-                href={`/product/${id}`}
+                href={`/products/product/${id}`}
               >
                 {title}
               </Link>
