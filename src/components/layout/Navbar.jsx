@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { HiMenu, HiX } from 'react-icons/hi';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 const navItems = ['products', 'category', 'aboutUs'];
 
 const Navbar = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => setIsOpen(false), [router.pathname]);
   return (
     <header className='relative w-full  mx-auto  bg-purple-500 h-10 md:max-h-10'>
       <nav className='max-w-7xl  mx-auto flex justify-between items-center h-10 pl-2 pr-2'>
