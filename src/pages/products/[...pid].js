@@ -13,7 +13,6 @@ const ProductPage = () => {
   const { data, isLoading, isSuccess } = useGetProductsByIDQuery(
     pid ? +pid[1] : ''
   );
-  console.log(data);
 
   if (isLoading) <Banners />;
 
