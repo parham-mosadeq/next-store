@@ -39,7 +39,7 @@ const ProductsCard = ({ product }) => {
               <div>
                 <Link
                   className=' font-thin text-purple-400 hover:text-purple-600'
-                  href={`/categories/category/${id}`}
+                  href={`/category/${category}`}
                 >
                   {category}
                 </Link>
