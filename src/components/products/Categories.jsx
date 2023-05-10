@@ -7,7 +7,7 @@ const Categories = ({ categories }) => {
         {categories.map((cat) => {
           return (
             <div className='w-full bg-red-50 p-4 ' key={cat}>
-              <Link href={`/`}>{cat}</Link>
+              <Link href={`/category/${cat.toLowerCase()}`}>{cat}</Link>
             </div>
           );
         })}
