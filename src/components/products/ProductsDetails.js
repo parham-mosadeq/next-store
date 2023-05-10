@@ -13,14 +13,14 @@ const ProductsDetails = ({
 }) => {
   return (
     <Layout title={pageTitle}>
-      <main className='w-full h-screen  my-10 rounded-md md:h-96 shadow-xl '>
+      <main className='w-full h-full  my-10 rounded-md md:h-96 shadow-xl '>
         {/* left side  */}
         <h2 className='text-purple-800 text-center border-b-2 my-2 pt-4 pb-2'>
           {title}
         </h2>
         <div className='px-1 py-2 flex flex-col items-center justify-center mx-auto md:grid md:grid-cols-2 '>
-          <article className='h-full w-full'>
-            <div className='h-1/2 w-3/4 mx-auto mb-3 md:m-1 '>
+          <article className='h-1/2 w-1/2   md:h-full lg:h-56'>
+            <div className='h-full w-3/4 mx-auto mb-3 md:m-1 '>
               <img
                 className='w-full h-min md:h-full object-cover rounded-sm block m-0 '
                 src={image}
@@ -51,6 +51,7 @@ const ProductsDetails = ({
               </div>
             </div>
           </article>
+          {/* btn */}
         </div>
       </main>
     </Layout>

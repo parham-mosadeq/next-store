@@ -21,7 +21,7 @@ const ProductPage = () => {
     const pageTitle = trimTitles(data.title);
     return (
       <>
-        <div className=''>
+        <div className='min-h-screen'>
           <ProductsDetails {...data} pageTitle={pageTitle} />
         </div>
       </>
