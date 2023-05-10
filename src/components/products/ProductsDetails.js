@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Layout from '../layout/Layout';
 import { HiStar, HiBookOpen } from 'react-icons/hi';
+import Buttons from './Buttons';
 const ProductsDetails = ({
   category,
   description,
@@ -52,6 +53,7 @@ const ProductsDetails = ({
             </div>
           </article>
           {/* btn */}
+          <Buttons id={id} />
         </div>
       </main>
     </Layout>
