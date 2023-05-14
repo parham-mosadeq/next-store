@@ -2,16 +2,16 @@ import Link from 'next/link';
 import Layout from '../layout/Layout';
 import { HiStar, HiBookOpen } from 'react-icons/hi';
 import Buttons from './Buttons';
-const ProductsDetails = ({
-  category,
-  description,
-  id,
-  image,
-  price,
-  rating: { rate, count },
-  title,
-  pageTitle,
-}) => {
+const ProductsDetails = ({ product, pageTitle }) => {
+  const {
+    category,
+    description,
+    id,
+    image,
+    price,
+    rating: { rate, count },
+    title,
+  } = product;
   return (
     <Layout title={pageTitle}>
       <main className='w-full h-full  my-10 rounded-md md:h-96 shadow-xl '>
@@ -53,7 +53,7 @@ const ProductsDetails = ({
             </div>
           </article>
           {/* btn */}
-          <Buttons id={id} />
+          <Buttons id={id} product={product} />
         </div>
       </main>
     </Layout>

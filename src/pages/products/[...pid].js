@@ -21,7 +21,7 @@ const ProductPage = () => {
     return (
       <>
         <div className='min-h-screen'>
-          <ProductsDetails {...data} pageTitle={pageTitle} />
+          <ProductsDetails product={data} pageTitle={pageTitle} />
         </div>
       </>
     );
