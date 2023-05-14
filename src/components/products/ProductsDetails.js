@@ -33,7 +33,7 @@ const ProductsDetails = ({ product, pageTitle }) => {
           <article className='capitalize '>
             <div>
               <h3 className='text-center text-purple-500'>
-                <Link href={`/categories/${category}`}>{category}</Link>
+                <Link href={`/category/${category}`}>{category}</Link>
               </h3>
               <div className='w-full flex justify-between'>
                 <p className='flex items-center '>
