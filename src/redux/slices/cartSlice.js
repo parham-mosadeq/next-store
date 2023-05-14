@@ -28,7 +28,14 @@ export const cartSlice = createSlice({
       state.itemsID = newItemsID;
       state.quantity-- <= 0 ? (state.quantity = 0) : 0;
     },
+
+    checkout: (state, payload) => {
+      // state.items = initialState.items;
+      // state.itemsID = initialState.itemsID;
+      // state.quantity = 0;
+      return (state = initialState);
+    },
   },
 });
 
-export const { addToCart, removeItem } = cartSlice.actions;
+export const { addToCart, removeItem, checkout } = cartSlice.actions;
