@@ -5,10 +5,11 @@ import { useRouter } from 'next/router';
 
 const Layout = ({ children, title }) => {
   const { pathname } = useRouter();
+  const isHome = pathname !== '/';
   return (
-    <main className=' w-3/4 mx-auto min-h-screen'>
+    <main className={`${!isHome ? 'w-full' : 'w-3/4'} mx-auto min-h-screen`}>
       <Titles title={title} />
-      {pathname !== '/' ? <BackBtn /> : ''}
+      {isHome && <BackBtn />}
       {children}
     </main>
   );
