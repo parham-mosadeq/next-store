@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { HiMenu, HiX, HiShoppingBag } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import ItemsCounter from './ItemsCounter';
