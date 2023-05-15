@@ -4,7 +4,7 @@ import Products from '@/components/products/Products';
 import { checkout } from '@/redux/slices/cartSlice';
 import { useRouter } from 'next/router';
 const CheckOutPage = () => {
-const router = useRouter(); 
+  const router = useRouter();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cartState.items);
 
@@ -16,7 +16,7 @@ const router = useRouter();
           <button
             onClick={() => {
               dispatch(checkout());
-              router.replace('/checkout/payed')
+              router.replace('/checkout/payed');
             }}
             className='bg-blue-700 mx-auto w-1/2 rounded-md hover:shadow-lg flex items-center justify-center my-1 text-white px-3 py-2 active:scale-95'
           >
