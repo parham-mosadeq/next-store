@@ -45,10 +45,13 @@ const Navbar = () => {
           </li>
           {navItems.map((ni) => (
             <li
-              className='text-white mt-10 hover:scale-95 hover:text-yellow-100  md:mr-3 md:m-0 md:border-none'
+              className={`${
+                ni.toLocaleLowerCase() === 'checkout' &&
+                'bg-white text-black p-1 rounded-lg hover:bg-slate-300'
+              } text-white mt-10 hover:scale-95 hover:text-yellow-100  md:mr-3 md:m-0 md:border-none`}
               key={ni}
             >
-              <Link href={`/${ni === 'home' ? '' : ni.toLowerCase()}`}>
+              <Link href={`/${ni === 'home' ? '' : ni.toLowerCase()} `}>
                 {ni}
               </Link>
             </li>
