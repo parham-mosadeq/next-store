@@ -1,9 +1,8 @@
+import { trimTitles } from 'lib';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 const ProductsCard = ({ product }) => {
   const { id, image, title, price, category } = product;
-
-  const [details, setDetails] = useState(false);
 
   return (
     <>
@@ -22,30 +21,16 @@ const ProductsCard = ({ product }) => {
                 className='text-purple-700 hover:text-purple-600 p-0 m-0'
                 href={`/products/product/${id}`}
               >
-                {title}
+                {trimTitles(title, 5)}...
               </Link>
             </h2>
           </div>
-          {
-            <button onClick={() => setDetails((prev) => !prev)}>
-              {details ? 'Hide details' : 'Show more details'}
-            </button>
-          }
-          {details && (
-            <div className='w-full  flex justify-between items-center'>
-              <div>
-                {price} <span className='text-green-600'>$</span>
-              </div>
-              <div>
-                <Link
-                  className=' font-thin text-purple-400 hover:text-purple-600'
-                  href={`/category/${category}`}
-                >
-                  {category}
-                </Link>
-              </div>
+
+          <div className='w-full  flex justify-center items-center'>
+            <div>
+              {price} <span className='text-green-600'>$</span>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </>

@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import ProductsGrid from './ProductsGrid';
-const Categories = ({ categories }) => {
+import { useGetCategoryQuery } from '@/redux/slices/getData';
+const Categories = () => {
+  const { data } = useGetCategoryQuery();
+  console.log(data);
   return (
     <>
       <ProductsGrid>
-        {categories.map((cat) => {
+        {data.map((cat) => {
           return (
-            <div className='w-full bg-red-50 p-4 ' key={cat}>
+            <div className='w-full h-fit bg-red-50 p-4 ' key={cat}>
               <Link href={`/category/${cat.toLowerCase()}`}>{cat}</Link>
             </div>
           );
