@@ -14,7 +14,9 @@ const ProductPage = () => {
     pid ? +pid[1] : ''
   );
 
-  if (isLoading) <Banners />;
+  if (isLoading) {
+    return <Banners />;
+  }
 
   if (isSuccess) {
     const pageTitle = trimTitles(data.title);

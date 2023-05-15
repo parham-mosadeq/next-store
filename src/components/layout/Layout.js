@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 const Layout = ({ children, title }) => {
   const { pathname } = useRouter();
   return (
-    <main className=' w-full mx-auto min-h-screen'>
+    <main className=' w-3/4 mx-auto min-h-screen'>
       <Titles title={title} />
       {pathname !== '/' ? <BackBtn /> : ''}
       {children}

@@ -10,8 +10,9 @@ const CategoryPage = () => {
   const { data, isLoading, isSuccess } = useGetCategoryIDQuery(cid);
   console.log(data);
 
-  if (isLoading) <Banners />;
-
+  if (isLoading) {
+    return <Banners />;
+  }
   if (isSuccess) {
     return (
       <Layout title={cid.toLocaleUpperCase()}>

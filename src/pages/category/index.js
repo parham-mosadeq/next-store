@@ -9,7 +9,9 @@ import {
 const CategoriesPage = () => {
   const { data, isLoading, isSuccess } = useGetCategoryQuery();
 
-  if (isLoading) <Banners />;
+  if (isLoading) {
+    return <Banners />;
+  }
   if (isSuccess) {
     return (
       <Layout title='Categories'>

@@ -2,22 +2,16 @@ import Banners from '@/components/layout/Banners';
 import Layout from '@/components/layout/Layout';
 import Pagination from '@/components/layout/Pagination';
 import Products from '@/components/products/Products';
-import {
-  useGetProductsQuery,
-  useGetCategoryQuery,
-  useGetSortedProductsQuery,
-  useGetCategoryIDQuery,
-  useGetProductsByIDQuery,
-} from '@/redux/slices/getData';
+import { useGetProductsQuery } from '@/redux/slices/getData';
 import { POSTS_PER_PAGE } from 'configs';
 import { useState } from 'react';
 
 const ProductsPage = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const { data, isLoading, isSuccess, isError } = useGetProductsQuery();
-
-  if (isLoading && !isSuccess) <Banners banner={isLoading} />;
-
+  if (isLoading) {
+    return <Banners />;
+  }
   if (isSuccess) {
     const numPages = Math.ceil(data.length / POSTS_PER_PAGE);
     const orderedProducts = data.slice(
